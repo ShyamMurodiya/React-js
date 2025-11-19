@@ -72,7 +72,7 @@ git push -u origin main
 `}
     </pre>
   );
-}</p>
+</p>
     </div>
   )
 }
