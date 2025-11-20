@@ -4,7 +4,7 @@ const card = () => {
   return (
     <div>
       <p id='para'>Github all Informationq</p>
-      <p>
+      
     <pre className="whitespace-pre-wrap text-sm p-4">
 {`⭐ NOTES: How to update my uploaded GitHub project
 
@@ -72,7 +72,6 @@ git push -u origin main
 `}
     </pre>
   );
-</p>
     </div>
   )
 }
