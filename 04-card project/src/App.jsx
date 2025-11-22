@@ -92,8 +92,9 @@ const jobs = [
   return (
     <div className="parent">
         
-          {jobs.map(function(ele){
-            return <Cards 
+          {jobs.map(function(ele,idx){
+            return <div key={idx}>
+              <Cards 
             comp={ele.company}
             logo={ele.logo}
             time={ele.time}
@@ -102,6 +103,7 @@ const jobs = [
             type2={ele.type2}
             salary={ele.salary}
             location={ele.location}/>
+            </div>
           })}
        
       </div>
