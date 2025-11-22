@@ -2,20 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    background-color: #403e3e;
+    font-size: 30px;
+    font-weight: bolder;
 }
+
 html,
 body{
     height: 100%;
     width: 100%;
-
-    background-color: rgb(227, 219, 219);
+    background-color: #f5f5f5;
 }
 
-.parent {
+.parent{
     display: flex;
     flex-direction: row;  
-    
     gap: 60px;
     flex-wrap: wrap;
     min-height: 100vh;
@@ -28,62 +29,88 @@ body{
 .card{
     height: 380px;       
     width: 280px;       
-    flex: 0 0 auto;       
-    background-color: transparent;
-    border-radius: 30px;
+    flex: 0 0 auto;
+
+    /* Glass blur background */
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-radius: 20px;
     padding: 30px;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.25);
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    /* 🔥 Strong premium card shadow */
+    box-shadow: 
+        0px 12px 30px rgba(0, 0, 0, 0.35),   /* deep shadow */
+        0px 4px 10px rgba(0, 0, 0, 0.25),    /* soft inner shadow */
+        inset 0px 0px 4px rgba(255, 255, 255, 0.35); /* inner glow */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth animation */
 }
 
+.card:hover {
+    transform: scale(1.05); /* increase size */
+    box-shadow: 
+        0px 18px 40px rgba(0, 0, 0, 0.45), 
+        0px 6px 15px rgba(0, 0, 0, 0.30);
+}
 .card .top{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(144, 24, 36, 0.394);
-    border: 1px solid black;
+
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
     border-radius: 12px;
     margin: 2px;
     padding: 2px 4px;
+
+    backdrop-filter: blur(8px);
 }
+
 .top img{
     height: 34px;
     width: 38px;
     border-radius: 50%;
-    border: 1px solid #ff9f06;
+    border: 1px solid #4d9cff;
     padding: 1px;
 }
+
 .top button{
     display: flex;
     align-items: center;
-    border: 1px solid #000000;
+    border: 1px solid #4d9cff;
     padding: 4px 8px;
     font-size: 10px;
-    font-size: 10px;
-    border-radius: 5px ;
-    color:black;
+    border-radius: 5px;
+    color: #004a99;
     gap: 3px;
-    background-color: transparent; 
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
 }
 
-.middle{
-    background-color: transparent;
-}
 .middle h3{
     font-size: 18px;
     font-weight: 500;
+    color: #fff;
 }
+
 .middle h3 span{
-    font-size: 12 px;
-    color: #8b8b8b;
+    font-size: 12px;
+    color: #e6e6e6;
     font-weight: 300;
 }
+
 .middle h2{
     font-size: 20px;
     font-weight: 700;
+    color: #fff;
 }
 
 .middle .tag{
@@ -94,15 +121,40 @@ body{
 
 .middle .tag h4{
     font-size: 15px;
-    padding: 3px 6 px;
+    background-color: rgba(255,255,255,0.2);
+    padding: 3px 6px;
+    border-radius: 5px;
+    color: #fff;
+    backdrop-filter: blur(3px);
 }
 
 .bottom{
-    background-color:  transparent;
+    background-color: transparent;
     display:flex;
     align-items: center;
     justify-content: space-between;
-    border-top:1px solid #f79000;
+    border-top:1px solid rgba(255,255,255,0.4);
     padding-top: 15px; 
-    /* uparniche left-right  */
+}
+
+.bottom .left h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.bottom .left p{
+    font-size: 12px;
+    color: #e6e6e6;
+    font-weight: 400;
+}
+
+.bottom button{
+    font-size: 10px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #4d9cff;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    color: #004a99;
 }
